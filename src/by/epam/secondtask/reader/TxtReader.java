@@ -23,9 +23,9 @@ public class TxtReader {
         try (Stream<String> lineStream = Files.newBufferedReader(path).lines()) {
             ingredients = lineStream.collect(Collectors.toList());
         } catch (IOException e) {
-            log.error("Problem with reading from file");
-            new LineReaderException ("Problem with lines reading", e);
+            new LineReaderException ("Problem with reading from file", e);
         }
+        log.info("We got information about ingredients");
         return ingredients;
     }
 }
