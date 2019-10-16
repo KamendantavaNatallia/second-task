@@ -3,7 +3,6 @@ package by.epam.secondtask.action;
 import by.epam.secondtask.entity.Vegetables;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.util.List;
 
 public class IngredientFinder {

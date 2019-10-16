@@ -1,11 +1,16 @@
 package by.epam.secondtask.action;
 
-import by.epam.secondtask.entity.*;
+import by.epam.secondtask.entity.Vegetables;
+import by.epam.secondtask.entity.Fruits;
+import by.epam.secondtask.entity.FruitsKind;
+import by.epam.secondtask.entity.Leafy;
+import by.epam.secondtask.entity.LeafyKind;
+import by.epam.secondtask.entity.Roots;
+import by.epam.secondtask.entity.RootsKind;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.testng.reporters.FailedReporter;
 
 import java.util.ArrayList;
 import java.util.List;

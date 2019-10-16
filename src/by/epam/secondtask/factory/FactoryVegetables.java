@@ -1,6 +1,12 @@
 package by.epam.secondtask.factory;
 
-import by.epam.secondtask.entity.*;
+import by.epam.secondtask.entity.Vegetables;
+import by.epam.secondtask.entity.Fruits;
+import by.epam.secondtask.entity.FruitsKind;
+import by.epam.secondtask.entity.Roots;
+import by.epam.secondtask.entity.RootsKind;
+import by.epam.secondtask.entity.Leafy;
+import by.epam.secondtask.entity.LeafyKind;
 import com.sun.jdi.InvalidTypeException;
 
 public class FactoryVegetables {

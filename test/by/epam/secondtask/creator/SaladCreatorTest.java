@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.testng.Assert.*;
 
 public class SaladCreatorTest {
     SaladCreator saladCreator;
