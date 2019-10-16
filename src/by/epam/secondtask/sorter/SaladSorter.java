@@ -1,5 +1,7 @@
-package by.epam.secondtask.utils;
+package by.epam.secondtask.sorter;
 
+import by.epam.secondtask.comparator.CaloriesComparator;
+import by.epam.secondtask.comparator.WeightComparator;
 import by.epam.secondtask.creator.SaladCreator;
 import by.epam.secondtask.entity.Vegetables;
 import org.apache.logging.log4j.LogManager;

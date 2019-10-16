@@ -14,6 +14,11 @@ public class Fruits extends Vegetables {
         super();
     }
 
+    public Fruits(FruitsKind fruitsKind, int calories, int weight) {
+        super(calories, weight);
+        this.fruitsKind = fruitsKind;
+    }
+
     public FruitsKind getFruitsKind(FruitsKind fruitsKind) {
         return this.fruitsKind;
     }
@@ -28,5 +33,10 @@ public class Fruits extends Vegetables {
 
     public void setChopped(boolean chopped) {
         isChopped = chopped;
+    }
+
+    public String getName()
+    {
+        return fruitsKind.name();
     }
 }

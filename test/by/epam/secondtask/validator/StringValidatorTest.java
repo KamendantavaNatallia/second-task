@@ -23,6 +23,13 @@ public class StringValidatorTest {
     }
 
     @Test
+    public void testFruitIsNotValidate() {
+        String test = "tomato cabbage parsley ";
+        check = validator.isValidate(test);
+        Assert.assertFalse(check);
+    }
+
+    @Test
     public void testLeafIsValidate() {
         String test = "CABBAGE   25  500 ";
         check = validator.isValidate(test);
@@ -30,9 +37,23 @@ public class StringValidatorTest {
     }
 
     @Test
+    public void testLeafIsNotValidate() {
+        String test = "CABBAGE13 Parsley  25 %$ 500 ";
+        check = validator.isValidate(test);
+        Assert.assertFalse(check);
+    }
+
+    @Test
     public void testRootIsValidate() {
         String test = " Beet 42 450 ";
         check = validator.isValidate(test);
         Assert.assertTrue(check);
+    }
+
+    @Test
+    public void testRootIsNotValidate() {
+        String test = "14 Beet 42 450 ";
+        check = validator.isValidate(test);
+        Assert.assertFalse(check);
     }
 }

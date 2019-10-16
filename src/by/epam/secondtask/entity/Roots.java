@@ -17,7 +17,11 @@ public class Roots extends Vegetables {
     }
 
     public Roots() {
+    }
 
+    public Roots(RootsKind rootsKind, int calories, int weight) {
+        super(calories, weight);
+        this.rootsKind = rootsKind;
     }
 
     public RootsKind getRootsKind(RootsKind rootsKind) {
@@ -34,5 +38,10 @@ public class Roots extends Vegetables {
 
     public void setPeeled(boolean peeled) {
         isPeeled = peeled;
+    }
+
+    public String getName()
+    {
+        return rootsKind.name();
     }
 }

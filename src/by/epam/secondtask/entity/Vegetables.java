@@ -1,5 +1,7 @@
 package by.epam.secondtask.entity;
 
+import java.util.Objects;
+
 public abstract class Vegetables {
     private int calories;
     private int weight;
@@ -12,7 +14,11 @@ public abstract class Vegetables {
     }
 
     public Vegetables() {
+    }
 
+    public Vegetables(int calories, int weight) {
+        this.calories = calories;
+        this.weight = weight;
     }
 
     public int getCalories(Integer integer) {
@@ -40,10 +46,26 @@ public abstract class Vegetables {
     }
 
     public int getCalories() {
-        return 0;
+        return calories;
     }
 
     public int getWeight() {
-        return 0;
+        return weight;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vegetables that = (Vegetables) o;
+        return calories == that.calories &&
+                weight == that.weight;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(calories, weight);
+    }
+
+    public abstract String getName();
 }

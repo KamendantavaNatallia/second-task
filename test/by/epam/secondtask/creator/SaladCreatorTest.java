@@ -30,7 +30,9 @@ public class SaladCreatorTest {
     @Test
     public void testMakeSalad() throws InvalidTypeException {
         List<Vegetables> salad = saladCreator.makeSalad(ingredients);
+
         int sizeSalad = salad.size();
+
         Assert.assertEquals(6, sizeSalad);
     }
 }

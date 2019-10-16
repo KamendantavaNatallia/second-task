@@ -1,4 +1,4 @@
-package by.epam.secondtask.creator;
+package by.epam.secondtask.factory;
 
 import by.epam.secondtask.entity.*;
 import com.sun.jdi.InvalidTypeException;
@@ -11,25 +11,25 @@ public class FactoryVegetables {
             case "CUCUMBER":
             case "TOMATO": {
                 Fruits fruit = new Fruits();
-                fruit.getFruitsKind(FruitsKind.valueOf(parameters[0].trim()));
-                fruit.getCalories(Integer.valueOf(parameters[1].trim()));
-                fruit.getWeight(Integer.valueOf(parameters[2].trim()));
+                fruit.setFruitsKind(FruitsKind.valueOf(parameters[0].trim()));
+                fruit.setCalories(Integer.valueOf(parameters[1].trim()));
+                fruit.setWeight(Integer.valueOf(parameters[2].trim()));
                 return fruit;
             }
             case "CABBAGE":
             case "PARSLEY": {
                 Leafy leaf = new Leafy();
-                leaf.getLeavesKind(LeafyKind.valueOf(parameters[0].trim()));
-                leaf.getCalories(Integer.valueOf(parameters[1].trim()));
-                leaf.getWeight(Integer.valueOf(parameters[2].trim()));
+                leaf.setLeafyKind(LeafyKind.valueOf(parameters[0].trim()));
+                leaf.setCalories(Integer.valueOf(parameters[1].trim()));
+                leaf.setWeight(Integer.valueOf(parameters[2].trim()));
                 return leaf;
             }
             case "BEET":
             case "CARROT": {
                 Roots root = new Roots();
-                root.getRootsKind(RootsKind.valueOf(parameters[0].trim()));
-                root.getCalories(Integer.valueOf(parameters[1].trim()));
-                root.getWeight(Integer.valueOf(parameters[2].trim()));
+                root.setRootsKind(RootsKind.valueOf(parameters[0].trim()));
+                root.setCalories(Integer.valueOf(parameters[1].trim()));
+                root.setWeight(Integer.valueOf(parameters[2].trim()));
                 return root;
             }
             default: throw new InvalidTypeException("This isn't suitable for salad.");

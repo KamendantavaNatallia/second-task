@@ -1,4 +1,4 @@
-package by.epam.secondtask.utils;
+package by.epam.secondtask.comparator;
 
 import by.epam.secondtask.entity.Vegetables;
 

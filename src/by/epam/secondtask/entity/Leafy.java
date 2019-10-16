@@ -16,7 +16,11 @@ public class Leafy extends Vegetables {
     }
 
     public Leafy() {
+    }
 
+    public Leafy(LeafyKind leafyKind, int calories, int weight) {
+        super(calories, weight);
+        this.leafyKind = leafyKind;
     }
 
     public LeafyKind getLeavesKind(LeafyKind leafyKind) {
@@ -33,5 +37,10 @@ public class Leafy extends Vegetables {
 
     public void setCrumbled(boolean crumbled) {
         isCrumbled = crumbled;
+    }
+
+    public String getName()
+    {
+        return leafyKind.name();
     }
 }
